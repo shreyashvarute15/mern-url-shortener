@@ -44,7 +44,7 @@ function App() {
     setCopied(false);
 
     try {
-      const res = await fetch('http://localhost:5000/api/shorten', {
+      const res = await fetch('https://mern-url-shortener-jyxi.onrender.com/api/shorten', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ originalUrl: normalizedUrl }),
@@ -552,3 +552,4 @@ function App() {
 }
 
 export default App;
+
