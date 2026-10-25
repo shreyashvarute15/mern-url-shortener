@@ -507,8 +507,8 @@ function App() {
               <span className="result-label">SHORT URL</span>
               <div className="short-link-row">
                 <div className="result-value">
-                  <a href={result.shortUrl} target="_blank" rel="noreferrer">
-                    {result.shortUrl}
+                  <a href={new URL(result.shortUrl).pathname.split("/").filter(Boolean).pop()} target="_blank" rel="noreferrer">
+                    {new URL(result.shortUrl).pathname.split("/").filter(Boolean).pop()}
                   </a>
                 </div>
                 <button
@@ -552,4 +552,5 @@ function App() {
 }
 
 export default App;
+
 
